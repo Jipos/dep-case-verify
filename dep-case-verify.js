@@ -23,9 +23,6 @@ function error(stream, row, step) {
 
 module.exports = function apply(b, opts) {
 
-  // nothing to do if this isn't a mac
-  if (process.platform !== 'darwin') return;
-
   // keep track of the steps we've seen across rows to minimize
   // the calls to "fs.readdir"
   var seen = [];
